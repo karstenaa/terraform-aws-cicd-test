@@ -13,7 +13,7 @@ provider "aws" {
 }
 
 module "tv_sql_product_s3_bucket_name" {
-  source = "https://github.com/traveloka/terraform-aws-resource-naming?ref=v0.4.0"
+  source = "https://github.com/traveloka/terraform-aws-resource-naming.git?ref=v0.4.0"
 
   name_prefix   = "${local.tv_sql_product_s3_bucket_name_prefix}"
   resource_type = "s3_bucket"
