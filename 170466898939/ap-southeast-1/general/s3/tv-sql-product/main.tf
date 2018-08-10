@@ -1,11 +1,3 @@
-terraform {
-  backend "s3" {
-    bucket         = "default-terraform-state-ap-southeast-1-170466898939"
-    dynamodb_table = "default-terraform-state-ap-southeast-1-170466898939"
-    key            = "ap-southeast-1/general/s3/tv-sql-product/terraform.tfstate"
-    region         = "ap-southeast-1"
-  }
-}
 
 provider "aws" {
   version = "1.13.0"
