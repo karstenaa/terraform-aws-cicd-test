@@ -1,0 +1,1 @@
+curl -i -X POST -H "Content-Type: application/json" -H "Authorization: token $1" -d "{\"body\": \"$(cat tfplan)\"}" https://api.github.com/repos/traveloka/terraform-aws-cicd-test/issues/1/comments
