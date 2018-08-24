@@ -8,7 +8,7 @@ command.close()
 
 git_token = os.environ["GIT_TOKEN"]
 tf_working_dir = os.environ["TF_WORKING_DIR"]
-f = open("build/", "r")
+f = open("build/metadata.json", "r")
 metadata = f.read()
 
 headers = {"Authorization": "token " + git_token}
