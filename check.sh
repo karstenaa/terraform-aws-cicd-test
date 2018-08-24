@@ -1,6 +1,8 @@
 git merge-base --is-ancestor origin/master HEAD
 if [ $? -ne 0 ]; then
+    echo $?
     echo "Error: Commit isn't based on origin/master"
+    git merge-base origin/master HEAD
     exit 1
 fi
 result=$(git diff origin/master --name-only | grep "\.tf$" | sed 's/\/[^/]\+\.tf$//g' | uniq)
