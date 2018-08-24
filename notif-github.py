@@ -7,5 +7,6 @@ tf_plan = command.read()
 command.close()
 
 git_token = os.environ["GIT_TOKEN"]
+tf_working_dir = os.environ["TF_WORKING_DIR"]
 headers = {"Authorization": "token " + git_token}
-r = requests.post('https://api.github.com/repos/traveloka/terraform-aws-cicd-test/issues/1/comments', headers=headers, json={"body": "```hcl\n" + tf_plan})
+r = requests.post('https://api.github.com/repos/traveloka/terraform-aws-cicd-test/issues/1/comments', headers=headers, json={"body": "TF_WORKING_DIR = " + tf_working_dir + "\n" + "```hcl\n" + tf_plan})
