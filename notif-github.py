@@ -9,7 +9,6 @@ command.close()
 git_token = os.environ["GIT_TOKEN"]
 f = open("build/metadata.json", "r")
 metadata = f.read()
-metadata.close()
 headers = {"Authorization": "token " + git_token}
 print git_token
 json = {"body": "```json\n" + metadata + "```\n```hcl\n" + tf_plan +"```\n"}
