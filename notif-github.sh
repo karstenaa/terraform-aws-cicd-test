@@ -1,2 +1,0 @@
-
-curl -i -v -X POST -H "Content-Type: application/json" -H "Authorization: token $1" -d "{\"body\": \"$(terraform show tfplan -no-color | sed 's/\"/\\"/g' | tr '\n' '\')\"}" https://api.github.com/repos/traveloka/terraform-aws-cicd-test/issues/1/comments --trace-ascii /dev/stdout
