@@ -39,18 +39,3 @@ resource "aws_s3_bucket_policy" "tv_sql_product" {
   bucket = "${aws_s3_bucket.tv_sql_product.id}"
   policy = "${data.aws_iam_policy_document.tv_sql_product.json}"
 }
-
-module "beiartf_s3" {
-  source = "github.com/traveloka/terraform-aws-beiartf-s3"
-
-  environment = "management"
-
-  roles_ids = [
-    "AROAJNIF36KKKUH3LUBOC:*", # role beiartf ci writer
-    "AROAJZR75IFQBR2RADMG6:*", # role beiartf reader
-    "AROAI2IEV4NMLKC7UPSO4:*", # role beiartf Admin
-    "AROAJTJVOI3G5TVVM2M76:*", # role beiartf writer for data team
-    "AROAJP4N2XYTNEUJBPV34:*", # role beiartf midas
-    "AROAIKBSFYLAN6UXFHTKS:*", # role beiartf bei
-  ]
-}
