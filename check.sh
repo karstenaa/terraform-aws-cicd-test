@@ -5,7 +5,7 @@ if [ $? -ne 0 ]; then
 fi
 
 if [ $GIT_MASTER_COMMIT_ID != $LATEST_COMMIT_APPLY ]; then
-    echo "Error: Git commit on origin/master($LATEST_COMMIT_APPLY) and latest-commit-apply($LATEST_COMMIT_APPLY) on S3 aren't equal"
+    echo "Error: Git commit on origin/master($GIT_MASTER_COMMIT_ID) and latest-commit-apply($LATEST_COMMIT_APPLY) on S3 aren't equal"
     exit 1
 fi
 
