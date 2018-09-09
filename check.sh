@@ -6,6 +6,7 @@ fi
 
 if [ $GIT_MASTER_COMMIT_ID != $LATEST_COMMIT_APPLY ]; then
     echo "Error: Git commit on origin/master($LATEST_COMMIT_APPLY) and latest-commit-apply($LATEST_COMMIT_APPLY) on S3 aren't equal"
+    exit 1
 fi
 
 export TF_WORKING_DIR="$(git diff origin/master --name-only | grep '\.tf$' | sed 's/\/[^/]\+\.tf$//g' | uniq)"
