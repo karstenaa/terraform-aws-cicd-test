@@ -6,7 +6,7 @@ command = os.popen('terraform show build/tfplan -no-color')
 tf_plan = command.read()
 command.close()
 
-git_token = os.environ["GIT_TOKEN"]
+git_token = os.environ["GITHUB_TOKEN"]
 pr_id = os.environ["PR_ID"]
 f = open("build/metadata.json", "r")
 metadata = f.read()
