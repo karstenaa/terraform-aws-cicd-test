@@ -22,7 +22,6 @@ module "beiartf_s3" {
     "AROAJZR75IFQBR2RADMG6:*", # role beiartf reader
     "AROAI2IEV4NMLKC7UPSO4:*", # role beiartf Admin
     "AROAJTJVOI3G5TVVM2M76:*", # role beiartf writer for data team
-    "AROAJP4N2XYTNEUJBPV34:*", # role beiartf midas
     "AROAIKBSFYLAN6UXFHTKS:*", # role beiartf bei
   ]
 }
