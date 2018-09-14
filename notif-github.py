@@ -12,7 +12,7 @@ f = open("build/metadata.json", "r")
 metadata = f.read()
 headers = {"Authorization": "token " + git_token}
 json = {
-    "body": "```json\n" + metadata + "```\n```hcl\n" + tf_plan +"```\n"
+    "body": "metadata.json\n```json\n" + metadata + "```terraform.tfplan\n```hcl\n" + tf_plan +"```\n"
 }
 r = requests.post('https://api.github.com/repos/traveloka/terraform-aws-cicd-test/issues/' + pr_id +'/comments', headers=headers, json=json)
 print r.json
