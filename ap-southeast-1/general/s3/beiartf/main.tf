@@ -43,12 +43,10 @@ module "beiartf_s3_new_new" {
 module "beiartf_s3_new" {
   source = "github.com/traveloka/terraform-aws-beiartf-s3"
 
-  environment = "management"
+  environment = "managemsent"
 
   roles_ids = [
-    "AROAJNIF36KKKUH3LUBOC:*", # role beiartf ci writer
-    "AROAJZR75IFQBR2RADMG6:*", # role beiartf reader
-    "AROAI2IEV4NMLKC7UPSO4:*", # role beiartf Admin
-    "AROAJTJVOI3G5TVVM2M76:*", # role beiartf writer for data team
+    "AROAJNIF36KKKUH3LUBOC:*",   # role beiartf ci writer
+    "AROAJZR75IFQBR2RADMG6aa:*", # role beiartf reader
   ]
 }
