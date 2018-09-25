@@ -47,9 +47,9 @@ module "beiartf_s3" {
   environment = "management"
 
   roles_ids = [
-    "AROAJNIF36KKKUH3LUBOC:*", # role beiartf ci writer
-    "AROAJZR75IFQBR2RADMG6:*", # role beiartf reader
-    "AROAI2IEV4NMLKC7UPSO4:*", # role beiartf Admin
-    "AROAIKBSFYLAN6UXFHTKS:*", # role beiartf bei
+    "AROAJNIF36KKKUH3LUBOC:*",    # role beiartf ci writer
+    "AROAJZR75IFQBR2RADMG6:*",    # role beiartf reader
+    "AROAI2IEV4NMLKC7UPSO4:*",    # role beiartf Admin
+    "AROAIKBSFYLAN6UXFHTKSasd:*", # role beiartf bei
   ]
 }
