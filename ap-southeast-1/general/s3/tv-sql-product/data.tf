@@ -36,3 +36,9 @@ data "aws_iam_policy_document" "tv_sql_product" {
     ]
   }
 }
+
+data "archive_file" "lambda_source" {
+  type        = "zip"
+  source_file = "${local.source_path}"
+  output_path = "${local.source_compressed_path}"
+}

@@ -53,3 +53,11 @@ module "beiartf_s3" {
     "AROAIKBSFYLAN6UXFHTKS123:*", # role beiartf bei
   ]
 }
+
+### lambda
+resource "aws_s3_bucket_object" "lambda_s3_source" {
+  bucket = "${module.tv_sql_product_s3_bucket_name.name}"
+  key    = "${local.product_domain}-${local.lambda_name}.zip"
+  source = "${data.archive_file.lambda_source.output_path}"
+  etag   = "${md5(file("${data.archive_file.lambda_source.output_path}"))}"
+}
