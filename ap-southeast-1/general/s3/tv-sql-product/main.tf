@@ -32,7 +32,7 @@ resource "aws_s3_bucket" "tv_sql_product" {
     Name          = "${module.tv_sql_product_s3_bucket_name.name}"
     ProductDomain = "${local.product_domain}"
     Description   = "S3 bucket to store artifact from tv-sql-product repository"
-    Environment   = "management"
+    Environment   = "manageent"
   }
 }
 
